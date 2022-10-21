@@ -42,6 +42,15 @@ const MessageList: FC<IMessageListProps> = ({
     prevProps.current = props
   }, [prevProps, props])
 
+  useEffect(() => {
+
+    if(props.msgListLoader !== "msg List Loader")
+    {
+      setScrollBottom(getBottom(referance))
+      checkScroll()
+    }
+  },[props.msgListLoader])
+
   const getBottom = (e: any) => {
     if (e.current) return e.current.scrollHeight - e.current.scrollTop - e.current.offsetHeight
     return e.scrollHeight - e.scrollTop - e.offsetHeight
@@ -135,7 +144,16 @@ const MessageList: FC<IMessageListProps> = ({
     <div className={classNames(['rce-container-mlist', props.className])} {...props.customProps}>
       {!!props.children && props.isShowChild && props.children}
       <div ref={referance} onScroll={onScroll} className='rce-mlist'>
-        {props.dataSource.map((x, i: number) => (
+        {props.msgListLoader === "msg List Loader" ?
+        <div className="mul-no-data-wrapper">
+        {/* Loading */}
+        {props.msgListLoaderComponant}
+  </div> :
+        props.dataSource.length === 0 ? 
+        <div className="mul-no-data-wrapper">
+              {props.emptyMsg}
+        </div> :
+        props.dataSource.map((x, i: number) => (
           <MessageBox
             key={i as Key}
             {...(x as any)}

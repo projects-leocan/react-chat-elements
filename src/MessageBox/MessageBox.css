@@ -3,22 +3,6 @@
   display: block;
   overflow-x: hidden;
   min-width: 300px;
-  /* background-color: #4f81a1; */
-}
-
-.ctp-model-main-wrapper {
-  font-size: 14px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-  position: fixed;
-  top: 0;
-  z-index: 5000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  left: 0;
 }
 
 .rce-mbox-forward {
@@ -26,7 +10,6 @@
   height: 30px;
   border-radius: 20px;
   background: #fff;
-  color: black;
   position: absolute;
   /*display: none;*/
   flex-direction: row;
@@ -39,15 +22,6 @@
   top: 0;
   bottom: 0;
   margin: auto;
-}
-
-.stp-folder-name-icon {
-  font-size: 20px;
-  padding-right: 10px;
-}
-
-.stp-folder-name-icon1 {
-  font-size: 22px;
 }
 
 .rce-mbox-forward-left {
@@ -163,6 +137,21 @@
   -webkit-animation-duration: 1s;
   animation-name: message-box-default-focus;
   animation-duration: 1s;
+}
+
+.rce-container-new-date-wrapper {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #d4d4d4; 
+  line-height: 0.1em;
+  color: #636363;
+  margin: 5px 0; 
+  font-size: 12px;
+}
+
+.rce-container-new-date-wrapper span {
+  background:#fff; 
+  padding:0 10px; 
 }
 
 @-webkit-keyframes message-box-default-focus {
@@ -357,92 +346,3 @@
 .rce-mbox-title > .rce-avatar-container {
   margin-right: 5px;
 }
-
-.rce-mbox-hover-icon-change {
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  font-size: 20px;
-  cursor: pointer;
-  /* background-color: aqua; */
-  /* width: 100%;
-  height: 100%; */
-}
-
-.hover-icon-change-left {
-  right: 2px;
-  top: 2px;
-  left:auto ;
-}
-
-.rce-hover-icon-dropdown-wrapper {
-  background-color: black;
-  color: #fff;
-  position: absolute;
-  z-index: 500000000;
-  left: 5px;
-  top: 20px;
-  padding: 15px;
-  min-width: 150px;
-  height: auto;
-}
-
-.ctp-model-main-wrapper-inner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  min-height: 97%;
-  max-height: 97%;
-  border-radius: 4px;
-}
-
-.ctp-model-file-wrapper {
-  background-color: #fff;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 100%;
-  padding: 40px;
-  border-radius: 4px;
-}
-
-.ctp-model-close-icon {
-  position: absolute;
-  z-index: 1000000;
-  right: 10px;
-  top: 5px;
-}
-
-.rpu-model-save-as-icon {
-  font-size: 40px;    
-  top:-10px ;
-  position: relative;
-}
-
-.ctp-dispaly-folder-ui-wrapper {
-  width: 98%;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.amm-dispaly-folder-ui-wrapper {
-  margin-bottom: 5px;
-}
-
-.ctp-folder-name {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 10px 10px 0;
-  padding-left: 10px;
-  align-items: center;
-  border-bottom: 1px solid #e0e0e0;
-  font-size: 14px;
-}
-

@@ -168,6 +168,9 @@ export interface IMessage {
   letterItem?: ILetterItem
   reply?: IReplyMessage | any
   type: string
+  newDate: {
+    date: string
+  }
 }
 
 /**
@@ -599,6 +602,10 @@ export interface IMessageListProps {
   onMeetingTitleClick?: React.MouseEventHandler
   onMeetingVideoLinkClick?: React.MouseEventHandler
   onMeetingLinkClick?: MessageListEvent
+  msgListLoader?: String
+  emptyMsg?: String
+  msgListLoaderComponant?: string;
+
 }
 
 /**
@@ -804,6 +811,7 @@ export interface IInputProps {
   onKeyDown?: React.KeyboardEventHandler
   onKeyPress?: React.KeyboardEventHandler
   onKeyUp?: React.KeyboardEventHandler
+  msgListLoader?: String
 }
 
 /**
