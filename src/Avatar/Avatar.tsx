@@ -58,7 +58,7 @@ const Avatar: React.FC<IAvatarProps> = ({ type = 'default', size = 'default', la
   }
 
   return (
-    <div className={classNames('rce-avatar-container', type, size, props.className)}>
+    <div>
       {props.letterItem ? (
         <div className='rce-avatar-letter-background' style={{ backgroundColor: stringToColour(props.letterItem.id) }}>
           <span className='rce-avatar-letter'>{props.letterItem.letter}</span>

@@ -56,7 +56,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, ...
     </div>
      }
 
-    <div ref={messageRef} className={classNames('rce-container-mbox', props.className)} onClick={props.onClick}>
+    <div ref={messageRef} className={classNames('rce-container-mbox', props.className)}>
       {/* {props.renderAddCmp instanceof Function && props.renderAddCmp()} */}
       {props.type === 'system' ? (
         <SystemMessage {...props} focus={focus} notch={notch} />

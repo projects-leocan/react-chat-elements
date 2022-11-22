@@ -39,6 +39,7 @@ const VideoMessage: React.FC<IVideoMessageProps> = props => {
       className={classNames('rce-mbox-video', {
         'padding-time': !props?.text,
       })}
+      onClick={props.onClick}
     >
       <div
         className='rce-mbox-video--video'

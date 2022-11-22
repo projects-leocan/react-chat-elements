@@ -209,6 +209,7 @@ export interface IPhotoMessageProps extends IPhotoMessage {
   onOpen?: React.MouseEventHandler
   onLoad?: React.ReactEventHandler
   onPhotoError?: React.ReactEventHandler
+  onClick?: React.MouseEventHandler
 }
 
 /**
@@ -339,6 +340,7 @@ export interface IVideoMessageProps extends IVideoMessage {
   onOpen?: React.MouseEventHandler
   onLoad?: React.ReactEventHandler
   onPhotoError?: React.ReactEventHandler
+  onClick?: React.ReactEventHandler
 }
 
 /**
@@ -398,6 +400,7 @@ export interface IAudioMessageProps extends IAudioMessage {
   onOpen?: React.MouseEventHandler
   onDownload?: React.MouseEventHandler
   onLoad?: React.ReactEventHandler
+  onClick?: React.MouseEventHandler
 }
 
 /**
@@ -427,6 +430,7 @@ export interface IFileMessage extends IMessage {
 export interface IFileMessageProps extends IFileMessage {
   onDownload?: Function
   onOpen?: React.MouseEventHandler
+  onClick?: React.MouseEventHandler
 }
 
 /**

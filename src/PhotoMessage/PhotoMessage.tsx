@@ -32,7 +32,7 @@ const PhotoMessage: React.FC<IPhotoMessageProps> = props => {
   const error = props?.data?.status && props?.data?.status.error === true
 
   return (
-    <div className='rce-mbox-photo'>
+    <div className='rce-mbox-photo' onClick={props.onClick}>
       <div
         className='rce-mbox-photo--img'
         style={{

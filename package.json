@@ -72,13 +72,14 @@
   "homepage": "https://github.com/detaysoft/react-chat-elements#readme",
   "scripts": {
     "dev-server": "webpack-dev-server --config webpack.dev.config.js",
-    "build": "yarn run clear:build && node node_modules/typescript/bin/tsc -p tsconfig.prod.json && yarn run copy-files",
+    "build:lib": "yarn run clear:build && node node_modules/typescript/bin/tsc -p tsconfig.prod.json && yarn run copy-files",
     "copy-files": "copyfiles -u 1 src/**/*.css build/",
     "clear:build": "rimraf dist build",
     "move:types": "copyfiles -u 1 src/type.d.ts dist/",
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "npm run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
-    "build:lib": "yarn run build && rollup -c && yarn run move:types"
+    "unbuild": "rimraf node_modules || rd /s /q node_modules",
+    "build": "yarn install && yarn run build:lib && rollup -c && yarn run move:types && yarn run unbuild"
   },
   "peerDependencies": {
     "react": "^17.0.2",
